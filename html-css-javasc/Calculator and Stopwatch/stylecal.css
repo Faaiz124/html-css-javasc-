@@ -99,3 +99,54 @@ button {
 .operator {
     color: #6dee0a;
 }
+
+
+/* fsdfsf */
+
+footer {
+    margin-top: 60%;
+    margin-left: ;
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    /* background-color: #fff; */
+    justify-content: center;
+    align-items: center;
+}
+
+.seti img {
+    padding: 5px;
+    margin: 5px;
+    padding-top: 10px;
+}
+
+.seti {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.git {
+    height: 60px;
+    margin: 10px;
+    display: flex;
+    width: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.pera {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #fff;
+}
