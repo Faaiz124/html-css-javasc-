@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box,
+}
+
+.main-game {
+    background-image: url(pic/guiltygearxx-stage-nirvana.gif);
+    background-size: cover;
+    /* fdgdfg */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+}
+
+.player1 {
+    position: absolute;
+    /* margin-top: 60rem; */
+}
+
+.player2 {
+    position: absolute;
+    transform: scaleX(-1);
+    /* margin-top: 60rem; */
+}
+
+.health-level {
+    position: relative;
+    align-self: flex-start;
+    width: 510px;
+    margin-right: 23rem;
+}
+
+.health-level2 {
+    position: relative;
+    align-self: flex-start;
+    width: 510px;
+    transform: scaleX(-1);
+}
+
+p {
+    color: #ffffff;
+    position: relative;
+    align-self: flex-start;
+    justify-content: center;
+    margin-left: -20rem;
+    margin-right: 4rem;
+    margin-top: 10px;
+    font: 5em sans-serif;
+}
