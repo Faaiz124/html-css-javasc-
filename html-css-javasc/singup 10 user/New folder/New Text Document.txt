@@ -1,0 +1,87 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyA9Uju7-66a0_JsfLEXBoRGGfzIqVJTFUc",
+    authDomain: "log-in-sign-up-1d3ab.firebaseapp.com",
+    projectId: "log-in-sign-up-1d3ab",
+    storageBucket: "log-in-sign-up-1d3ab.appspot.com",
+    messagingSenderId: "253746495466",
+    appId: "1:253746495466:web:a2f7434ba6841f7c1bbc93"
+  };
+  
+  // Initialize Firebase
+  const app = firebase.initializeApp(firebaseConfig);
+  
+  // Initialize variable
+  const auth = firebase.auth();
+  const database = firebase.database();
+  
+  // set up registration function 
+  function register(){
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("nemail").value;
+    var pass = document.getElementById("npass").value;
+  
+    // validate input field
+    if(validate_email(email) == false || validate_pass(pass) == false || validate_field(name)== false){
+      alert("Email or Password is not right");
+      return;
+    }
+  
+    // Auth function
+    auth.createUserWithEmailAndPassword(email, pass)
+      .then(function(){
+        var user = auth.currentUser;
+  
+        // add this user to firebase data
+        var database_ref = database.ref("user/" + user.uid);
+  
+        // Create user data 
+        var user_data = {
+          email : email,
+          user_name : name,
+          Last_login : Date.now()
+        };
+  
+        database_ref.set(user_data);
+  
+        alert("User Created!!");
+      })
+      .catch(function(error){
+        var error_code = error.code;
+        var error_message = error.message;
+  
+        alert(error_message);
+      });
+  }
+  
+  function validate_email(email){
+    expression = /^[^@]+@\w+(\.\w+)+\w$/;
+    if(expression.test(email) == true){
+      return true;
+    } else {
+      return false;
+    }
+  }
+  
+  function validate_pass(pass){
+    if(pass.length < 6){
+      return false;
+    } else {
+      return true;
+    }
+  }
+  
+  function validate_field(field){
+    if(field == null || field.length <= 0){
+      return false;
+    } else {
+      return true;
+    }
+  }
+  
