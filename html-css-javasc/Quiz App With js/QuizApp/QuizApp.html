@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="quiz_style.css">
+</head>
+
+<body>
+
+
+    <section class="main_Container">
+        <div class="timer">
+            <p id="timer">2:00</p>
+        </div>
+        <section class="sec_main">
+            <div class="main">
+                <div class="question">
+                <div class="Q1"><h1 id="Question"></h1>.</div>
+                <p id="Question_th"></p>
+            </div>
+        </div>
+    </section>
+    <section class="sec_mainb">
+        <div class="main_option">
+            <div class="Choice">
+                <div class="option_div">
+                    <input type="radio" name="quizOption" value="option1" id="option1">
+                    <div class="label">
+                        <label for="option1"></label>
+                    </div>
+                </div>
+                <div class="option_div">
+                    <input type="radio" name="quizOption" value="option2" id="option2">
+                    <div class="label">
+                        <label for="option2"></label>
+                    </div>
+                </div>
+                <div class="option_div">
+                    <input type="radio" name="quizOption" value="option3" id="option3">
+                    <div class="label">
+                        <label id="label" for="option3"></label>
+                    </div>
+                </div>
+                <div class="option_div">
+                    <input type="radio" name="quizOption" value="option4" id="option4">
+                    <div class="label">
+                        <label for="option4"></label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="sec_mainb">
+        <div class="main_button">
+            <div class="button">
+                <div class="container-login100-form-btn">
+                    <div class="wrap-login100-form-btn">
+                        <div class="login100-form-bgbtn"></div>
+                        <div onclick="displayQuiz()" class="login100-form-btn">
+                            NEXT
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+<script src="quiz.js"></script>
+</body>
+
+</html>
