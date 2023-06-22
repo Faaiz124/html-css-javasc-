@@ -1,3 +1,21 @@
+// Create an array of email addresses
+var emailAddresses = [
+  "Faaizali123@gmail.com",
+];
+
+var Password = [
+  "12345"
+];
+// Convert the array to JSON
+var emailAddressesJSON = JSON.stringify(emailAddresses);
+var Password = JSON.stringify(Password);
+
+// Store the JSON in the local storage
+localStorage.setItem('emailAddresses', emailAddressesJSON);
+localStorage.setItem('Password', Password);
+
+
+
 function Login() {
   var emailInput = document.getElementById('email');
   var passwordInput = document.getElementById('Password');
