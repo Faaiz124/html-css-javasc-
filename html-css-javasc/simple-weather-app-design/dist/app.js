@@ -21,6 +21,9 @@ function weatherSearch() {
   weather.fetchWeather(city);
 }
 
+const year = moment(). year() 
+document.getElementById("copyyear").innerHTML = year;
+
 
 
 // date and time
