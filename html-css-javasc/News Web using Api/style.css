@@ -8,6 +8,7 @@ a{
  font-size: 1.2rem;
  font-family: "Roboto";
  font-weight: 600;
+ display: contents;
 }
 
 .headerhover:hover{
@@ -183,7 +184,7 @@ a{
 .maincard{
     justify-content: center;
     align-items: center;
-
+    cursor: pointer;
 }
 
 .shadow{
@@ -191,4 +192,28 @@ a{
     margin: 5px !important; */
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 1rem;
+    transform: scaleY(1); 
+    transition: transform 0.3s ease;
+}
+.shadow:hover{
+  transform: translateY(-5px);
+}
+
+.img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card_link{
+  text-decoration: none;
+  color: #26272b;
+}
+.card_link:hover{
+  color: #1c1c18 !important;
+}
+
+.card-title{
+  font-size: 1.7rem;
+  font-weight: 700;
 }

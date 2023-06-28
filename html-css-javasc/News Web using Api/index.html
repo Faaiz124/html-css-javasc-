@@ -46,24 +46,25 @@
                 <a class="nav-link headerhover text-white" href="#Entertainment" id="Entertainment">Entertainment</a>
               </li>
             </ul>
-            <form class="d-flex ms-auto" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search news" aria-label="Search">
-              <button class="btn btn-outline-warning" type="button">Search</button>
-            </form>
+            <div class="d-flex ms-auto" role="search">
+              <input class="form-control me-2" id="search" type="search" placeholder="Search news" aria-label="Search">
+              <button class="btn btn-outline-warning" onclick="NewsSearch()" type="submit">Search</button>
+            </div>
           </div>
         </div>
       </nav>
     </div>
 
-    <div class="h me-auto ms-auto">
-      <h1>
-        Heading
+    <div class="h d-flex justify-content-center align-items-center mt-2 mb-0 me-auto ms-auto">
+      <h1 id="heading">
+      General 
       </h1>
     </div>
     <!-- bodydiv/// -->
-    <div class="mt-3 mb-3 d-flex flex-wrap me-auto ms-auto maincard">
+    <div class="mt-3 mb-3 d-flex flex-wrap maincard" id="news">
       <!-- first///////////////// -->
-      <div class="shadow card-group col-md-3 col-sm-6 p-2 me-auto ms-auto">
+     <!-- <a id="link" href=""> <div class="shadow card-group col-md-3 col-sm-6 me-auto ms-auto"  onclick="golive()">
+      <a class="card_link" href=""> 
         <div class="card">
           <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-top"
             alt="Hollywood Sign on The Hill" />
@@ -75,10 +76,12 @@
             </p>
           </div>
           <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-black">Last updated 3 mins ago</small>
           </div>
         </div>
-      </div>
+      </a>
+      </div> -->
+   
       <!-- end -->
     </div>
 
