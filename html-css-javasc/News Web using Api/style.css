@@ -9,6 +9,12 @@ a{
  font-family: "Roboto";
  font-weight: 600;
  display: contents;
+ color: #1c1c18;
+}
+
+
+a:hover{
+    color: #1c1c18;
 }
 
 .headerhover:hover{
